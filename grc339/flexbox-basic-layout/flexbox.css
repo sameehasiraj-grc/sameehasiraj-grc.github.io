@@ -1,0 +1,68 @@
+/*CSS DOCUMENT*/
+
+body {
+	font-family: sans-serif;
+	line-height: 1.4em;
+	color: #222;
+	background-color: #fafafa;
+	box-sizing: border-box;
+	}
+
+h3 {
+	color: black;
+}
+
+p {
+	color: black;
+}
+img {
+	width: 100%;
+	display: flex;
+	flex: 1 0 100;
+	}
+
+section {
+	background-color: rgb(230, 230, 230);
+	margin: 1em;
+	padding: 1em;
+}
+
+article {
+display: flex;
+flex: 2 2 40em;
+flex-direction: column;
+margin: 1em;
+}
+
+aside {
+	display: flex;
+	flex: 1 1 20em;
+	flex-direction: column;
+	margin: 1em;
+	flex-wrap: wrap;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+}
+
+header {
+	flex: 0 0 100%;
+	margin-top: 2em;
+}
+
+footer {
+	flex-wrap: wrap;
+	flex: 0 0 100%;
+	color: black;
+}
+
+a {
+	color: black;
+}
+
+figure {
+	margin: 0;
+}
