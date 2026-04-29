@@ -1,0 +1,362 @@
+/*CSS document*/
+
+/* trying to get in the habit of commenting out sections for better organization */
+
+html,
+body,
+div,
+h1,
+h2,
+p,
+a,
+img,
+center,
+ol,
+ul,
+li,
+caption,
+aside,
+figure,
+figcaption,
+footer,
+header,
+nav,
+
+section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	line-height: 1.6;
+	color: #1a1a1a;
+	background-color: #ffffff;
+}
+
+div.container {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 0em;
+	background-color: #ffffff;
+}
+
+img {
+	width: 100%;
+}
+
+/* HEADER */
+header {
+	padding: 1.25em 1em 0.75em;
+}
+
+h1 {
+	width: 8em;
+	margin-bottom: 0.75em;
+}
+
+h1 a {
+	display: block;
+}
+
+h1 img {
+	width: 100%;
+	display: block;
+}
+
+/* Nav */
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav ul li a {
+	font-family: sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height: 1.5em;
+	text-decoration: none;
+	color: #4a6fa5;
+	margin-right: 1.25em;
+	display: block;
+}
+
+main {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: calc(66% + 5);
+}
+
+/* HEADINGS */
+h2 {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight: bold;
+	color: #4a6fa5;
+	line-height: 1.2;
+	margin-bottom: 0.4em;
+}
+
+/* PARAGRAPHS */
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #1a1a1a;
+	margin-bottom: 1em;
+}
+
+/* FIGURES AND IMGS */
+figure {
+	width: 100%;
+}
+
+figure img {
+	width: 100%;
+	position: relative;
+}
+
+figcaption {
+	font-family: sans-serif;
+	font-style: italic;
+	font-size: 1em;
+	color: #666;
+	padding: 0.5em 1em 0em 0em;
+	padding-bottom: 0.1em;
+}
+
+/* Links inside sections */
+main a,
+aside a {
+	text-decoration: none;
+	display: block;
+}
+
+/* HOMEPAGE MAINSTORY */
+section.mainstory {
+	margin-bottom: 0;
+}
+
+section.mainstory h2 {
+	font-size: 2rem;
+	padding: 0.5em 1em 0.25em 0em;
+}
+
+section.mainstory p {
+	padding: 0 1em 1em 0em;
+	margin-bottom: 0;
+}
+
+/* HOMEPAGE SECONDARY STORIES */
+section.secondarystory {
+	border-bottom: 1px solid #ddd;
+	width: 100%;
+}
+
+section.secondarystory h2 {
+	font-size: 1.4rem;
+	padding: 0.5em 1em 0.25em 0em;
+}
+
+section.secondarystory p {
+	padding: 0 1em 1em 0em;
+	margin-bottom: 0;
+}
+
+/* TERTIARY STORIES */
+section.tertiarystory {
+	border-bottom: 1px solid #eee;
+	padding: 0.75em 1em;
+}
+
+section.tertiarystory h2 {
+	font-size: 1.1rem;
+	font-style: normal;
+}
+
+section.tertiarystory p {
+	font-size: 0.9em;
+	color: #444;
+	margin-bottom: 0;
+}
+
+/* MAINSTORY PAGE */
+article {
+	margin-bottom: 2em;
+}
+
+article h2 {
+	font-size: 1.75rem;
+	padding: 0.75em 1em 0.4em 0em;
+}
+
+article p {
+	padding: 0 1em 0em 0em;
+	margin-bottom: 1.25em;
+}
+
+article figure {
+	margin-bottom: 0;
+	width: 100%;
+}
+
+aside {
+	padding: 1.25em 1em 1em 1em;
+	background-color: #eddeff;
+}
+
+aside img {
+	width: calc(100% - 1em);
+}
+
+;
+
+/* FOOTER */
+footer {
+	padding: 1.5em 2em;
+	background-color: #6186bd;
+}
+
+footer p {
+	color: #ffffff;
+	background-color: #6186bd;
+}
+
+/* WIDER SCREEN */
+@media (min-width: 40em) {
+
+	div.container {
+		margin: auto;
+	}
+
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1.5em 2em 1em;
+		margin-bottom: 0;
+	}
+
+	h1 {
+		width: 10em;
+		margin-bottom: 0;
+	}
+
+	nav ul {
+		display: flex;
+		flex-direction: row;
+		gap: 0;
+	}
+
+	nav ul li a {
+		font-size: 1.2em;
+		display: inline;
+	}
+
+	figure {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%
+	}
+
+	figcaption {
+		padding: 0.5em 0;
+	}
+
+	/* Main stories */
+	main {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	/* Main story full width */
+	section.mainstory {
+		width: 100%;
+	}
+
+	section.mainstory h2 {
+		font-size: 2.5rem;
+		padding: 0.5em 0.5em 0em 0em;
+	}
+
+	section.mainstory p {
+		padding: 0 2em 1.25em 0em;
+	}
+
+	section.mainstory figure img {
+		max-height: 28em;
+		object-fit: cover;
+	}
+
+	/* Secondary stories: two per row */
+	section.secondarystory {
+		width: 100%;
+		border-bottom: 1px solid #ddd;
+	}
+
+	/* Alternate borders so inner stories don't double up */
+	section.secondarystory:nth-child(odd) {
+		border-right: 1px solid #ddd;
+	}
+
+	section.secondarystory h2 {
+		padding: 0.5em 1.5em 0.25em 0em;
+	}
+
+	section.secondarystory p {
+		padding: 0 1.5em 1em 0em;
+	}
+
+	section.secondarystory img {
+		width: 100%;
+		position: relative;
+		margin: auto;
+	}
+
+	/* Tertiary stories */
+	section.tertiarystory {
+		width: calc(100% - 2em);
+		border-bottom: 1px solid #eee;
+		border-right: 1px solid #eee;
+		padding: 1em 1.5em;
+	}
+
+	section.tertiarystory:nth-child(3n) {
+		border-right: none;
+	}
+
+	article {
+		flex: 2;
+	}
+
+	article h2 {
+		padding: 0.75em 0 0.4em;
+	}
+
+	article p {
+		padding: 0;
+	}
+
+	article figure {
+		margin-left: 0;
+		margin-right: 0;
+		width: (100% - 2em)
+	}
+
+	aside {
+		flex: 1;
+		border-top: none;
+		padding: 1 1 1 1.5em;
+		margin-top: 1.5em;
+	}
+
+	footer {
+		padding: 1.5em 2em;
+		background-color: #6186bd;
+	}
+
+	footer p {
+		color: #ffffff;
+	}
+}
