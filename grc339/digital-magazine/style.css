@@ -341,7 +341,7 @@ footer p {
 	article figure {
 		margin-left: 0;
 		margin-right: 0;
-		width: (100% - 2em)
+		width: calc(100% - 2em)
 	}
 
 	aside {
