@@ -1,21 +1,39 @@
-
 html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;}
 
 img {
     width: 100%;
     display: block;
-    border-radius: 1em;
 }
 
 body {
-    background-color: #ff9249;
+    background-color: #1a2a5e;
+    background-image: linear-gradient(160deg, #1a2a5e 40%, #0d4f2c 70%); 
 }
 
 div.container, div.home-container {
     margin: auto;
     max-width: 40em;
-    background-color: #ffe6ce;
+    background-color: #fbebdd;
 }
+
+.photogallery input {
+    display: none;
+ }
+ 
+ .photogallery figure {
+    display: none;
+ }
+ 
+ #photo1:checked ~ figure:nth-of-type(1),
+ #photo2:checked ~ figure:nth-of-type(2),
+ #photo3:checked ~ figure:nth-of-type(3),
+ #photo4:checked ~ figure:nth-of-type(4),
+ #photo5:checked ~ figure:nth-of-type(5),
+ #photo6:checked ~ figure:nth-of-type(6),
+ #photo7:checked ~ figure:nth-of-type(7),
+ #photo8:checked ~ figure:nth-of-type(8) {
+    display: block;
+ }
 
 h1 {
     padding: 2em 2em 0;
@@ -26,7 +44,8 @@ h2 {
     font-family: "jovie-glow", sans-serif;
     font-weight: 700;
     font-style: normal;
-    color: #005499;
+    font-size: 1.5em;
+    color: #05017e;
 }
 
 section {
@@ -62,12 +81,19 @@ p {
     color: #2e2d2b;
 }
 
+label {
+    margin: 0 1.5em;
+    font-family: "host-grotesk", sans-serif;
+    line-height: 1.2em;
+    color: #2e2d2b;
+}
+
 nav {
     margin: 2em 2em 3em;
     padding: 1em 0;
     border-top: 4px solid;
     border-bottom: 4px solid;
-    border-color: rgb(17, 92, 47);
+    border-color: rgb(0, 0, 0);
 }
 
 nav ul {
@@ -80,6 +106,37 @@ nav ul li {
     text-transform: uppercase;
     margin: 0.2em 0;
 }
+
+.photogallery nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+main.photogallery {
+    display: block;
+}
+
+.photogallery nav img {
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.photogallery figcaption {
+    text-align: center;
+    margin-top: .75rem;
+}
+ 
+.photogallery figure img {
+    width: 100%;
+    height: auto;
+    max-height: 40rem;
+    object-fit:cover;
+}
+
 
 nav ul li a {
     color: rgb(2, 47, 169);
@@ -150,6 +207,63 @@ article, main {
     padding-bottom: 1em;
 }
 
+.formsection {
+    padding-bottom: 1em;
+}
+
+.formsection label {
+    display: block;
+    margin: 0 0 0.3em 0;
+    font-weight: bold;
+}
+
+.formsection input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5em;
+    font-family: "host-grotesk", sans-serif;
+    font-size: 1em;
+    border: 2px solid #005499;
+    border-radius: 0.4em;
+    background-color: #fff8ed;
+}
+
+.newsletter-blurb form {
+    margin-top: 1.5em;
+}
+
+.newsletter-blurb section:not(.formsection) {
+    padding-bottom: 1.5em;
+}
+
+.newsletter-blurb h3 {
+    font-family: "host-grotesk", sans-serif;
+    font-weight: bold;
+    margin-bottom: 0.7em;
+    color: #2e2d2b;
+}
+
+.radios {
+    display: flex;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.radios label {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+}
+
+button {
+    padding: 0.6em 1.5em;
+    border-radius: 0.4em;
+    cursor: pointer;
+    background-color:rgb(17, 92, 47);
+    color: #fff8ed;
+}
 @media only screen and (min-width: 60em) {
 
     nav ul li {
@@ -265,6 +379,19 @@ article, main {
         padding-left: 1em;
     }
 
+    .photogallery {
+        grid-column: 1/3;
+     }  
+
+    .photogallery nav {
+            grid-template-columns: repeat(4, 1fr);
+    }
+
+    .photogallery figure {
+        max-width: 40em;
+        margin: 0 auto;
+    }
+
     aside section.tertiary {
         margin: 0.5em 0;
     }
@@ -335,6 +462,13 @@ article, main {
 
     article, main {
         border-bottom: none;
+    }
+
+    main.newsletter {
+        display: block;
+        grid-column: 1 / 3;
+        max-width: 36em;
+        padding: 2em;
     }
 
     h1, h2, section.main h2, p, nav, section, section.main, section.secondary, section.tertiary, section.secondary h2, section.tertiary h2, article p, figcaption, aside, aside section.secondary, aside section.secondary h2, aside section.tertiary p, footer, div.container article figure, article h2, aside section.tertiary p, aside section.tertiary h2 {
