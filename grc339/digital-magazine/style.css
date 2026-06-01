@@ -37,7 +37,7 @@ div.container, div.home-container {
 
 h1 {
     padding: 2em 2em 0;
-    max-width: 15em;
+    width: 10em;
 }
 
 h2 {
@@ -126,7 +126,7 @@ main.photogallery {
 }
 
 .photogallery figcaption {
-    text-align: center;
+    text-align: left;
     margin-top: .75rem;
 }
  
@@ -187,12 +187,13 @@ aside {
 
 aside section.secondary h2, aside section.tertiary h2 {
     font-size: 1em;
-    margin: 0.5em;
-    color: rgb(17, 92, 47);;
+    margin: 0em;
+    color: rgb(17, 92, 47);
+    padding-left: 2em;
 }
 
 aside section.tertiary p {
-    margin: 0.5em 0.5em 0;
+    margin: 0em 0em 0;
 }
 
 section.tertiary {
@@ -263,6 +264,7 @@ button {
     cursor: pointer;
     background-color:rgb(17, 92, 47);
     color: #fff8ed;
+    font-family: "host-grotesk", sans-serif;
 }
 @media only screen and (min-width: 60em) {
 
@@ -398,6 +400,7 @@ button {
 
     aside section.tertiary p {
         padding-bottom: 0.5em;
+        padding-left: 1em;
     }
 
     section.tertiary h2 {
@@ -450,8 +453,7 @@ button {
         padding-top: 1em;
     }
 
-    aside section.tertiary {
-        padding: 1em; 
+    aside section.tertiary { 
         border-width: 2px;
         border-top: none;
     }
@@ -462,6 +464,12 @@ button {
 
     article, main {
         border-bottom: none;
+    }
+
+    article.mainarticle {
+        border-bottom: none;
+        max-width: 70%;
+        margin-left: 10em;
     }
 
     main.newsletter {
@@ -475,4 +483,80 @@ button {
         margin: 0;
     }
 
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-color: #6488ff;
+    }
+
+    div.container, div.home-container {
+        background-color: #1a2a5e;
+    }
+
+    section a {
+        color: rgb(251, 242, 239);
+        line-height: 2em;
+    }
+
+    h2 {
+        color: #a0b6ff;
+    }
+
+    p {
+        color: rgb(255, 241, 235);
+    }
+
+    label {
+        color: rgb(255, 237, 230);
+    }
+
+    nav ul li a {
+        color: rgb(67, 193, 76);
+    }
+
+    nav {
+        border-color: #293f89;
+    }
+
+    footer {
+        padding: 1em 0;
+        background-color: rgb(67, 193, 76);
+        box-sizing: border-box;
+    }
+    
+    footer p {
+        color: rgb(17, 92, 47);
+        text-transform: uppercase;
+    }
+
+    aside {
+        background-color: rgb(255, 198, 107);
+    }
+
+    aside, div.home-container aside {
+        background-color: #293f89;
+    }
+
+    figcaption {
+        color: rgb(67, 193, 76);
+    }
+
+    aside section.secondary h2, aside section.tertiary h2 {
+        color: #a0b6ff;
+    }
+    
+    .newsletter-blurb h3 {
+        color: #fff1eb;
+    }
+
+    h1 {  
+        background-image: url("ataavi\ dark.svg");  
+        background-repeat: no-repeat;  
+        background-size: contain;  
+        }  
+    
+    h1 img {  
+        opacity: 0;  
+        }  
 }
